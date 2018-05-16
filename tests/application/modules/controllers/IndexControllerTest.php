@@ -17,9 +17,27 @@ class Movie_IndexControllerTest extends Zend_Test_PHPUnit_ControllerTestCase
         $this->assertResponseCode('200');
     }
 
-    public function testMovieModuleIndexView() {
+    public function testMovieModuleIndexView()
+    {
         $this->dispatch('/movie');
         $this->assertQueryCount('table#movie-list', 1);
+    }
+
+    public function testMovieModelFetchAll()
+    {
+        $movie = new Application_Model_Mapper_Movie();
+        $movies = $movie->fetchAll();
+        $this->assertEquals(3, count($movies));
+    }
+
+    public function testMovieModelFindByReleaseDate()
+    {
+        $movie = new Application_Model_Mapper_Movie();
+        $movies = $movie->findByReleaseDate(2017);
+        $this->assertInternalType('array', $movies);
+        $first = $movies[0];
+        $this->assertInstanceOf('Application_Model_Movie', $first);
+        $this->assertContainsOnlyInstancesOf('Application_Model_Movie', $movies);
     }
 }
 
