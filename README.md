@@ -5,3 +5,4 @@
 - zf create project
 - zf create module movie
 - zf create controller Index 1 movie
+- php -S localhost:8000 -t public\
