@@ -53,7 +53,7 @@ class Application_Model_Mapper_Movie {
     public function findByReleaseDate($release_date)
     {
         $result = $this->getAdapter()->findByReleaseDate($release_date);
-        $entries = array();
+        $movies = array();
         foreach ($result as $row) {
             $movies[] = $this->hydrate($row);
         }
