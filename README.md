@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/55667bdfd66b4dea85e03024d850b2f1)](https://www.codacy.com/app/lcube45/myzf1?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lcube45/myzf1&amp;utm_campaign=Badge_Grade)
+
 - composer init
 - composer require zendframework/zendframework1
 - composer require phpunit/phpunit
