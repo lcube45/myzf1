@@ -33,15 +33,15 @@ class Application_Model_Mapper_Movie {
             'release_date'  => $movie->getReleaseDate(),
         ];
 
-        if (null === ($id = $movie->getMovieId())) {
+        if (null === ($movie_id = $movie->getMovieId())) {
             unset($data['id']);
             $this->getAdapter()->insert($data);
-        } else {
-            $this->getAdapter()->update($data, array('movie_id = ?' => $id));
         }
+
+        $this->getAdapter()->update($data, array('movie_id = ?' => $movie_id));
     }
 
-    public function find($id, Application_Model_Movie $movie)
+    public function find($id)
     {
         $result = $this->getAdapter()->find($id);
         if (0 == count($result)) {
@@ -57,7 +57,7 @@ class Application_Model_Mapper_Movie {
         foreach ($result as $row) {
             $movies[] = $this->hydrate($row);
         }
-        return $entries;
+        return $movies;
     }
 
     public function fetchAll()
