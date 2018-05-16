@@ -1,0 +1,15 @@
+{
+    "name": "lcube/myzf1",
+    "description": "Zend Framework 1 best practices",
+    "require": {
+        "zendframework/zendframework1": "^1.12",
+        "phpunit/phpunit": "4.1.0",
+        "phpunit/dbunit": "1.3.0"
+    },
+    "authors": [
+        {
+            "name": "Laurent Le Lardeux",
+            "email": "laurent.le-lardeux@gfi.fr"
+        }
+    ]
+}

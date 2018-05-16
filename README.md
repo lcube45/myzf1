@@ -1,0 +1,7 @@
+- composer init
+- composer require zendframework/zendframework1
+- composer require phpunit/phpunit
+- composer install
+- zf create project
+- zf create module movie
+- zf create controller Index 1 movie
