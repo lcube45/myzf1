@@ -39,5 +39,16 @@ class Movie_IndexControllerTest extends Zend_Test_PHPUnit_ControllerTestCase
         $this->assertInstanceOf('Application_Model_Movie', $first);
         $this->assertContainsOnlyInstancesOf('Application_Model_Movie', $movies);
     }
+
+    public function testMovieModelInsert()
+    {
+        $movie = new Application_Model_Movie();
+        $movie->setTitle('Deadpool 2');
+        $movie->setReleaseDate(2018);
+
+        $movieMapper = new Application_Model_Mapper_Movie();
+        $movieMapper->save($movie);
+
+    }
 }
 

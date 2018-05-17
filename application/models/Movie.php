@@ -42,7 +42,7 @@ class Application_Model_Movie {
      */
     public function getReleaseDate()
     {
-        return 'Year - ' . $this->release_date;
+        return $this->release_date;
     }
 
     /**
