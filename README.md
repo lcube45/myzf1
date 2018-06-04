@@ -9,7 +9,6 @@
 
 # Utilisation PHPCS
 
-- vendor/bin/phpcs --set-config installed_paths '../../wimg/php-compatibility'
 - vendor/bin/phpcs --standard=PHPCompatibility --report=source --runtime-set testVersion 7.0 <path>
 - vendor/bin/phpcs --standard=PHPCompatibility --report=summary --runtime-set testVersion 7.0 <path>
 - vendor/bin/phpcs -s --report=summary <path>
