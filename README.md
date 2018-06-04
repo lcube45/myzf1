@@ -2,11 +2,25 @@
 
 [![CircleCI](https://circleci.com/gh/lcube45/myzf1.svg?style=svg)](https://circleci.com/gh/lcube45/myzf1)
 
-- composer init
-- composer require zendframework/zendframework1
-- composer require phpunit/phpunit
+# Utilisation
+
 - composer install
-- zf create project
-- zf create module movie
-- zf create controller Index 1 movie
 - php -S localhost:8000 -t public\
+
+# Utilisation PHPCS
+
+- vendor/bin/phpcs --set-config installed_paths '../../wimg/php-compatibility'
+- vendor/bin/phpcs --standard=PHPCompatibility --report=source --runtime-set testVersion 7.0 <path>
+- vendor/bin/phpcs --standard=PHPCompatibility --report=summary --runtime-set testVersion 7.0 <path>
+- vendor/bin/phpcs -s --report=summary <path>
+
+# Utilisation PHP7CC
+
+- vendor/bin/php7cc <path>
+
+# Utilisation PHPUNIT
+
+- vendor/bin/phpunit
+- cd tests/
+- ../vendor/bin/phpunit --list-groups
+- ../vendor/bin/phpunit --groupe <package>
