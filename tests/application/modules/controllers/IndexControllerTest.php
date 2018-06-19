@@ -20,7 +20,7 @@ class Movie_IndexControllerTest extends Zend_Test_PHPUnit_ControllerTestCase
     public function testMovieModuleIndexView()
     {
         $this->dispatch('/movie');
-        $this->assertQueryCount('table#movie-list', 1);
+        $this->assertQueryCount('table#movie-listjjjj', 1);
     }
 
     public function testMovieModelFetchAll()
